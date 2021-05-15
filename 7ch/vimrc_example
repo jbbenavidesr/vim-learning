@@ -1,0 +1,23 @@
+set nocompatible	" Use Vim settings, rather than Vi settings
+set softtabstop=2	" Indent by 2 spaces when hitting tab
+set shiftwidth=4	" Indent by 4 spaces when auto-indenting
+set tabstop=4		" Show existing tab with 4 spaces width
+syntax on		" Enable syntax highlighting
+filetype indent on	" Enable indenting for files
+set autoindent 		" Enable auto indenting
+set number		" Enable line numbers
+set relativenumber	" Show number in current line and relative to that in the rest.
+colorscheme desert	" Set nice looking colorscheme
+set nobackup		" Disable backup files (I backup every night to the other disk)
+set laststatus=2	" Show status line
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+set wildmenu 		" Display command line's tab complete options as a menu.
+
+" Map the escape to jk (insert mode)
+imap jk <Esc>	
+
+" Keep my working directory clean by saving backups, swaps and undo files in
+" other location.
+set backupdir=.backup/,$HOME/.vim/.backup//,/tmp//
+set directory=.swp/,$HOME/.vim/swp//,/tmp//
+set undodir=.undo/,$HOME/.vim/undo//,/tmp//
