@@ -20,4 +20,4 @@ imap jk <Esc>
 " other location.
 set backupdir=.backup/,$HOME/.vim/.backup//,/tmp//
 set directory=.swp/,$HOME/.vim/swp//,/tmp//
-set undodir=.undo/,$HOME/.vim/undo//,/tmp//
+set undodir=.undo/,$HOME/.vim/undodir//,/tmp//
