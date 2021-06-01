@@ -28,3 +28,25 @@ The command `:vimgrep` allows you to search for a pattern in multiple files. It 
 for markdown files.
 
 For example, a recursive search that includes subdirectories requieres a file pattern of the type `**/*.md`.
+
+## Match the string
+
+Using the command `:match` and some predefined color in vim you can highlight all the matches to a search pattern.
+
+## The power of the global command
+
+There is a global command to apply a command in every line that matches a search pattern it goes like:
+ 
+`:[range]g/pattern/cmd`
+
+Where it applies the command to every line in the range that contains a match. In this case the default range is `%`, the whole file.
+The command is one of those that normally go with a colon before.
+
+With a `!` after the g it inverts the match and applies the command to all lines that don't match.
+
+**Example**: Delete all blank lines
+
+`:g/^\s*$/d`
+
+It can be used to do a lot of powerful things, it's a very interesting command to play with. The command can be a search and replace
+done in all lines matching a pattern or something like that.
